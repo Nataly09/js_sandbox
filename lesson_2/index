@@ -29,7 +29,7 @@ function clearNumbers(arr){
    if( typeof item === "string"){
        for(var i = item.length - 1; i >= 0; i--){ 
         str += item.charAt(i);}
-        arr.push(str);
+        arr.unshift(str);
         str = '';
     }  
 }
