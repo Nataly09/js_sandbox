@@ -1,18 +1,17 @@
 
-
 //2
 
 function print(size){
     let general = "";
 
     for (let pos = 0; pos <= size; pos++){
-        let line = "+";
+        let line = "*";
         for (let inner_counter = 0; inner_counter<pos; inner_counter++, line = " " + line);
 
         for (let inner_counter = 0; inner_counter < (size-pos)*2-1; inner_counter++, line += " " );
 
         if (pos < size)
-            line += "+\n";
+            line += "*\n";
 
         general+=line;
     }
@@ -21,9 +20,40 @@ function print(size){
 
 }
 
-function print2(){
 
+function print2(size){
+    let general = "";
+    for (let pos = 0; pos < size; pos++){
+        let line = "*";
+        
+        for (let inner_counter = pos ; inner_counter > 0; inner_counter--, line = line + " " + " ");
+
+        for (let inner_counter = (size-pos)-1; inner_counter > 0; inner_counter--, line = " " + line );
+
+        if (pos < size)
+            line += "*\n";
+
+        general+=line;
+    }
+    for (let pos = 0; pos <= size; pos++){
+        let line = "*";
+        
+        for (let inner_counter = 0; inner_counter<pos; inner_counter++, line = " " + line);
+
+        for (let inner_counter = 0; inner_counter < (size-pos)*2-1; inner_counter++, line += " " );
+
+        if (pos < size)
+            line += "*\n";
+
+        general+=line;
+    }
+
+    return general;
+    
 }
+
+
+
 
 
 //3
@@ -64,6 +94,77 @@ if(formula === 1){
      calculate();
  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
