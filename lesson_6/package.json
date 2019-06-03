@@ -9,7 +9,7 @@
     "build": "rm -rf dist && parcel build ./index.html --public-url /lesson_6",
     "deploy": "gh-pages -d dist"
   },
-  "author": "",
+  "author": " ",
   "license": "ISC",
   "dependencies": {
     "email-validator": "^2.0.4",

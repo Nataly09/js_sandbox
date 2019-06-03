@@ -4,7 +4,6 @@
 
 let div = document.getElementById('div');
 
-
 let button = document.getElementById('button');
 let close = document.getElementById('close');
 let mial = document.getElementById('mial');
