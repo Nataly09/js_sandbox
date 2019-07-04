@@ -39,6 +39,9 @@ function strangeSearch(arr){
 
 //3
 
+function mask-input(){
+    
+}
 
 //4
 function stickyСat(){
