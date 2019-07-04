@@ -1,0 +1,36 @@
+.div_style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+#main{
+    display: flex;
+}
+
+body{
+    background: #e8fff7;
+}
+
+footer{
+    background: #d2fff456;
+}
+
+address{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+    font-style: initial;
+    font-family: monospace;
+}
+
+a{
+    padding-top: 15px;
+    display: block;
+    text-decoration: none;
+    color: #10025f;
+    text-align: center;
+}
