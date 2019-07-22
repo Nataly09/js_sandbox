@@ -1,25 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Emitter from "./Emitter";
 
 
 export default class Tiers extends React.Component {
     constructor(props) {
         super(props);
 
-        // Emitter.on(this,"data-send", (f)=>{
-        //     console.log("Sended : " + f);
-        // });
-
-        // Emitter.emit("data-send", "One");
 
         this.state = {
             width_tiers1: '',
             height_tiers1: '',
-            width_tiers2: '0',
-            height_tiers2: '0',
-            width_tiers3: '0',
-            height_tiers3: '0',
+            width_tiers2: '',
+            height_tiers2: '',
+            width_tiers3: '',
+            height_tiers3: '',
             tiers2: 'none',
             tiers3: 'none',
         }
@@ -68,6 +62,12 @@ export default class Tiers extends React.Component {
          this.props.StepTiers(this.state.width_tiers1, this.state.height_tiers1, 
             this.state.width_tiers2,  this.state.height_tiers2,
             this.state.width_tiers3,  this.state.height_tiers3);
+            this.setState({ width_tiers1: '',
+            height_tiers1: '',
+            width_tiers2: '',
+            height_tiers2: '',
+            width_tiers3: '',
+            height_tiers3: '', })
      }
 
     
@@ -76,8 +76,8 @@ export default class Tiers extends React.Component {
         return (
             <div>
                 <div>Первый ярус
-                   <div>Ширина яруса<input type='text' value={this.state.width_tiers1} onChange={this.ChangeWidthTiers1}></input></div>
-                    <div>Высота яруса<input type='text' value={this.state.height_tiers1} onChange={this.ChangeHeightTiers1}></input></div>
+                   <div>Ширина яруса<input type='number' value={this.state.width_tiers1} onChange={this.ChangeWidthTiers1} ></input></div>
+                    <div>Высота яруса<input type='number' value={this.state.height_tiers1} onChange={this.ChangeHeightTiers1}></input></div>
                     <button onClick={this.ClickAddTiers1}>Добавить ярус</button>
                 </div>
                 <div style={{ display: this.state.tiers2 }}>Второй ярус
@@ -98,4 +98,3 @@ export default class Tiers extends React.Component {
 }
 
 
-//onClick={() => this.props.nextStep(this.state.width_tiers1, this.state.height_tiers1)}
