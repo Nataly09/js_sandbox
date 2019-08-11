@@ -14,7 +14,7 @@ function geolocation_search() {
     div1.style.display = 'none';
 }
 
-//setTimeout(geolocation_search, 5000);
+setTimeout(geolocation_search, 3000);
 
 
 function getDate() {
@@ -71,22 +71,38 @@ function fun_list() {
     div.appendChild(input);
     div.appendChild(button);
     div.appendChild(ol);
+
+  let arr;
+
+    getDate().then((res) => {
+      let  arrList = res.list;
+        for(i=0; i < arrList.length; i++){
+        const li = document.createElement('li');
+        li.innerText = arrList[i];
+        li.style.color = 'white';
+         li.style.fontSize = '22px';
+         ol.appendChild(li);
+        }
+   
+        arr = arrList;
+     })
+    
     button.addEventListener('click', () =>{
         if(input.value != ''){
-         putDate({ list: input.value});
-         getDate().then((res) => {
-            const li = document.createElement('li');
-            li.innerText = res.list;
-            li.style.color = 'white';
-             li.style.fontSize = '22px';
-             ol.appendChild(li);
-             input.value = '';
-         }
-         )}
-    })
+            arr.push(input.value),
+         putDate({ list: arr});
+          const li = document.createElement('li');
+          li.innerText = input.value;
+          li.style.color = 'white';
+           li.style.fontSize = '22px';
+           ol.appendChild(li);
+           input.value = '';
+        }
+
+         })
 }
 
 
 
-
+fun_list();
 
