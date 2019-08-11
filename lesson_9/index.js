@@ -18,6 +18,13 @@ function drawOnScroll() {
     })
 }
 
+
+
+// waitForScroll();
+// drawOnScroll();
+
+
+
 //2
 
 function waitForAnswer() {
@@ -38,10 +45,13 @@ function setText(text) {
     div.innerHTML = text;
 }
 
+
+
+
 //setText(' Вы сделали домашнее задание? Y / N');
-waitForAnswer()
-    .then(() => setText('Так держать!'))
-    .catch(() => setText('Нужно подтянуть('))
+// waitForAnswer()
+//     .then(() => setText('Так держать!'))
+//     .catch(() => setText('Нужно подтянуть('))
 
 
 //3
@@ -84,4 +94,6 @@ function clickChallange(clicknum, time){
     
 }
 
+
+//clickChallange(5, 5000);
 
