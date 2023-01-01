@@ -16,6 +16,6 @@
     "random-email": "^1.0.3"
   },
   "devDependencies": {
-    "parcel": "^1.12.3"
+    "parcel": "^2.8.2"
   }
 }
